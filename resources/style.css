@@ -5,6 +5,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   width: 80%;
+  max-width: 1250px;
   margin: auto;
   background-color: #fefae0;
   color: #3e3e3e;
@@ -17,20 +18,27 @@ h3 {
   color: #4b6a88;
 }
 
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 header {
-  grid-area: nav;
+  background-color: #fde3a7;
 }
 
 nav {
   display: grid;
-  grid-template-areas: "logo . . links";
+  grid-template-areas: "logo . links";
   align-items: center;
 }
 
 nav span {
-  grid-area: logo;
   padding-left: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #4b6a88;
   font-family: "Roboto", sans-serif;
@@ -40,24 +48,83 @@ nav ul {
   grid-area: links;
   display: flex;
   justify-content: space-evenly;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-main {
-  grid-area: main;
+a {
+  color: #2abb9b;
+  text-decoration: none;
+  transition: color 250ms ease-out, font-size 200ms ease-out;
 }
+
+a:hover {
+  color: #3477db;
+  font-size: 1.22rem;
+  text-decoration: underline;
+}
+
+/* main {
+  grid-area: main;
+} */
 
 #about-me {
-  grid-area: about;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  gap: 0 2%;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#about-me img {
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px #3477db;
+  padding: 5%;
+  background-color: #fde3a7;
 }
 
 #projects {
-  grid-area: projects;
+  padding-bottom: 5rem;
+  text-align: center;
 }
 
-#contact {
-  grid-area: contact;
+#project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 3%;
+  margin-top: 1rem;
+}
+
+#project-list h3 {
+  padding: 0.5rem 0;
+}
+
+#project-list div {
+  /* border: 3px solid #4b6a88; */
+  background-color: #fde3a7;
+}
+
+#project-list p {
+  padding: 1rem;
 }
 
 footer {
-  grid-area: foot;
+  background-color: #fde3a7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: baseline;
+  padding: 1rem 1rem 0.5rem;
+}
+
+footer h2 {
+  font-size: 1.2rem;
+  justify-self: end;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
 }
