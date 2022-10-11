@@ -7,7 +7,7 @@ body {
   width: 80%;
   max-width: 1250px;
   margin: auto;
-  background-color: #fefae0;
+  background-color: #f9f8f2;
   color: #3e3e3e;
 }
 
@@ -127,4 +127,26 @@ footer ul {
   display: flex;
   justify-content: space-evenly;
   padding-left: 0;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #3477db;
+  color: #f9f8f2;
+  border-radius: 100% / 95%;
+  transition: background-color 200ms ease-out;
+  display: none;
+}
+
+#scrollTop i {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+#scrollTop:hover {
+  background-color: #2abb9b;
 }
