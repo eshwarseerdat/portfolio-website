@@ -140,6 +140,7 @@ footer ul {
   border-radius: 100% / 95%;
   transition: background-color 200ms ease-out;
   display: none;
+  z-index: 99;
 }
 
 #scrollTop i {
@@ -149,4 +150,32 @@ footer ul {
 
 #scrollTop:hover {
   background-color: #2abb9b;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #about-me {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #selfie {
+    margin-top: 1rem;
+  }
+
+  footer {
+    align-items: center;
+  }
+
+  footer h2 {
+    padding-right: 1rem;
+  }
+
+  footer #contact {
+    gap: 6%;
+    text-align: center;
+    margin: 0;
+  }
+
+  #scrollTop {
+    right: 1%;
+  }
 }
