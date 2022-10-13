@@ -37,6 +37,7 @@ nav {
 }
 
 nav span {
+  grid-area: logo;
   padding-left: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
@@ -113,20 +114,29 @@ a:hover {
 footer {
   background-color: #fde3a7;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "p header list";
+  grid-template-rows: auto;
   align-items: baseline;
   padding: 1rem 1rem 0.5rem;
+}
+
+footer p {
+  grid-area: p;
+  font-weight: 500;
 }
 
 footer h2 {
   font-size: 1.2rem;
   justify-self: end;
+  grid-area: header;
 }
 
 footer ul {
   display: flex;
   justify-content: space-evenly;
   padding-left: 0;
+  grid-area: list;
+  font-size: 1.1rem;
 }
 
 #scrollTop {
@@ -177,5 +187,81 @@ footer ul {
 
   #scrollTop {
     right: 1%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+
+  main {
+    width: 80%;
+    margin: auto;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav span {
+    display: none;
+  }
+
+  nav ul {
+    padding: 1rem 0;
+    margin-top: 0;
+  }
+
+  #about-me {
+    grid-template-columns: 1fr;
+    gap: 1% 0;
+  }
+
+  #about-me div:first-of-type {
+    order: 2;
+  }
+
+  #about-me #selfie {
+    order: 1;
+  }
+
+  #project-list {
+    grid-template-columns: 1fr;
+    gap: 2%;
+  }
+
+  footer {
+    margin-top: 1rem;
+    grid-template-columns: none;
+    grid-template-areas:
+      "p"
+      "header"
+      "list";
+  }
+
+  footer p {
+    font-size: 1.1rem;
+  }
+
+  footer h2 {
+    justify-self: center;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+  }
+
+  footer ul {
+    text-align: center;
+    margin: 0;
+  }
+
+  footer ul li {
+    margin-right: 0;
+    font-size: 1.2rem;
+  }
+
+  #scrollTop {
+    right: 0;
+    bottom: 3.5rem;
   }
 }
